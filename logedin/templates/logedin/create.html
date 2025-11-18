@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static%}
+{% block extra_css%}
+<link rel="stylesheet" href="{% static 'logedin/create.css' %}?v=1">
+{%endblock%}
+
+{% block title %}Create Todo{% endblock %}
+
+{% block content %}
+<div class="create-todo-container">
+    <form action="" method="post" class="create-todo-form" novalidate>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" class="btn-submit" value="Submit">
+    </form>
+</div>
+{% endblock %}

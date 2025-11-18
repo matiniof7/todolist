@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Header at the top */
+h2{
+    position: fixed;       /* fix it at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    padding: 15px 0;
+    z-index: 1001;         /* higher than navbar */
+}
+
+/* Navbar below the header */
+.site-nav {
+    position: fixed;
+    top: 60px;             /* height of header */
+    left: 0;
+    width: 100%;
+    background-color: #007bff;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* Navbar list styling */
+.site-nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 15px 0;
+    list-style: none;
+    gap: 30px;
+}
+
+.site-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.site-nav ul li a:hover {
+    color: #ffd700;
+}
+
+/* Push page content below header + navbar */
+body {
+    padding-top: 120px; /* header height + navbar height */
+}

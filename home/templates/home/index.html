@@ -1,0 +1,27 @@
+{% extends "home/base.html" %}
+
+
+{% block title %}Homepage{%endblock%}
+
+{%block nav%}
+    <li><a href="{% url 'login' %}">register/login</a></li>
+
+{%endblock%}
+
+
+
+
+
+{%block content%} 
+<h3 style="
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #007bff;
+">No pain no gain</h3>
+
+{%endblock%}

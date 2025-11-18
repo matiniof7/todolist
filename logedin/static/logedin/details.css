@@ -1,0 +1,63 @@
+/* Container */
+.todo-details-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* Action buttons */
+.todo-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.btn-delete, .btn-update {
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-delete {
+    background-color: #dc3545; /* red */
+}
+
+.btn-delete:hover {
+    background-color: #a71d2a;
+}
+
+.btn-update {
+    background-color: #007bff; /* blue */
+}
+
+.btn-update:hover {
+    background-color: #0056b3;
+}
+
+/* Todo information */
+.todo-info p {
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+.todo-title {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.todo-description {
+    color: #555;
+}
+
+.todo-remind {
+    color: #888;
+    font-style: italic;
+}

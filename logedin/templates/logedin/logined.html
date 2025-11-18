@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static%}
+{% block extra_css%}
+<link rel="stylesheet" href="{% static 'logedin/logined.css' %}?v=1">
+{%endblock%}
+
+
+{% block content %}
+<div class="home-container">
+   
+
+    <p class="welcome-msg">Welcome <b class="username">{{ user.username }}</b></p><br><br>
+    <a href="{% url 'create_todo' %}"><button class="btn-todo">Create Todo</button></a>
+    <ul class="todo-list">
+        {% for todo in todos %}
+            <li class="todo-item">
+                <a class="todo-link" href="{% url 'details' todo.id %}">{{ todo.title }}</a>
+            </li>
+            {% empty %}
+                <li class="todo-item">No todos yet!</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

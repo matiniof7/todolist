@@ -1,0 +1,42 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'home/style.css' %}">
+    {% block extra_css%}{% endblock%}
+</head>
+<body>
+
+<header>
+    <h2 class="class="site-header"">Just do it</h2>
+</header>
+
+
+<nav class="site-nav" >
+    <ul>
+        <li><a href="{%url 'home'%}">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        {%block nav%}{%endblock%}
+    </ul>
+</nav>
+
+<main>
+    {% block content %}{% endblock %}
+</main>
+
+<!-- Default Footer -->
+<footer>
+  
+    {% block footer %}{% endblock %} <!-- Optional extra footer content -->
+</footer>
+
+{% block script %}{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static%}
+{% block extra_css%}
+<link rel="stylesheet" href="{% static 'logedin/details.css' %}?v=1">
+{%endblock%}
+
+{% block content %}
+<div class="todo-details-container">
+
+    <div class="todo-actions">
+        <a href="{% url 'delete' todo.id %}" class="btn-delete">Delete</a>
+        <a href="{% url 'update' todo.id %}" class="btn-update">Update</a>
+    </div>
+
+    <div class="todo-info">
+        <p class="todo-title">{{ todo.title }}</p>
+        <p class="todo-description">{{ todo.info }}</p>
+        <p class="todo-remind">Remind at: {{ todo.remind_at }}</p>
+    </div>
+
+</div>
+{% endblock %}

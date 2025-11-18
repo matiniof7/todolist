@@ -1,0 +1,69 @@
+/* Center the form on the page */
+form.register-form {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* Style Django form fields */
+form.register-form p {
+    margin-bottom: 15px;
+}
+
+form.register-form input[type="text"],
+form.register-form input[type="password"],
+form.register-form input[type="email"] {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Submit button styling */
+form.register-form input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+form.register-form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Login link under form */
+form.register-form a {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #007bff;
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+form.register-form a:hover {
+    color: #0056b3;
+}
+
+/* Messages styling */
+form.register-form p.message {
+    background-color: #ffeded;
+    border: 1px solid #ff5c5c;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    color: #a70000;
+    font-size: 14px;
+    text-align: center;
+}

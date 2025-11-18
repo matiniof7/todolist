@@ -1,0 +1,23 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block title %}Login{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'accounts/login.css' %}?v=1">
+{% endblock %}
+
+{% block content %}
+    <form action="" method="post" novalidate> 
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Submit">
+        <a href="{% url 'register' %}"><p>Register</p></a>
+    </form>
+
+    {% if messages %}
+        {% for message in messages %}
+            <p class="message">{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+{% endblock %}

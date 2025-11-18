@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}Update Todo{% endblock %}
+{% load static%}
+{% block extra_css%}
+<link rel="stylesheet" href="{% static 'logedin/update.css' %}?v=1">
+{%endblock%}
+{% block content %}
+<div class="update-todo-container">
+    <form action="" method="post" class="update-todo-form" novalidate>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" class="btn-submit" value="Update">
+    </form>
+</div>
+{% endblock %}
